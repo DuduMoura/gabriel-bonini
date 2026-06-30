@@ -1,0 +1,129 @@
+Plano Técnico
+
+1. Arquitetura da Solução
+
+O sistema será desenvolvido utilizando uma arquitetura cliente-servidor baseada em aplicações web modernas.
+
+Frontend: React
+Backend (BaaS): Firebase
+Banco de Dados: Firestore
+Autenticação: Firebase Authentication
+
+2. Tecnologias Utilizadas
+Tecnologia	Finalidade
+React	Desenvolvimento da interface do usuário
+Vite	Ambiente de desenvolvimento e build
+Tailwind CSS	Estilização da interface
+Firebase Authentication	Cadastro e login de usuários
+Firebase Firestore	Armazenamento dos dados
+Recharts	Geração de gráficos
+Framer Motion	Animações da interface
+React Router	Navegação entre páginas
+Git	Controle de versão
+GitHub	Hospedagem do código-fonte
+
+3. Estrutura do Sistema
+
+O sistema será dividido em módulos:
+
+Módulo de Autenticação
+Cadastro
+Login
+Logout
+Módulo de Metas
+Criar meta
+Editar meta
+Encerrar meta
+Módulo de Recaídas
+Registrar recaída
+Histórico
+Módulo Dashboard
+Streak
+
+4. Estrutura do Banco de Dados
+
+Coleções do Firestore:
+
+habits
+lapses
+
+Relacionamentos:
+
+Usuário
+    │
+    ├── Meta
+    │       │
+    │       └── Recaídas
+
+Usuário
+
+↓
+
+Login
+
+↓
+
+Firebase Authentication
+
+↓
+
+Dashboard
+
+↓
+
+Leitura/Gravação
+
+↓
+
+Firestore
+
+↓
+
+Atualização da Interface
+
+6. Segurança
+Autenticação por e-mail e senha utilizando Firebase Authentication.
+Cada usuário terá acesso apenas aos próprios dados.
+As regras de segurança do Firestore restringirão leitura e escrita aos usuários autenticados.
+
+7. Estratégia de Desenvolvimento
+
+O desenvolvimento será realizado em etapas:
+
+Configuração do ambiente.
+Implementação da autenticação.
+Desenvolvimento do banco de dados.
+Desenvolvimento das páginas.
+Implementação do Dashboard.
+Testes.
+Deploy.
+
+8. Implantação
+
+O sistema será disponibilizado utilizando:
+Banco de dados e autenticação utilizando Firebase.
+
+9. Requisitos Técnicos
+Hardware
+
+Servidor
+
+Cliente
+
+Computador
+Conexão com internet
+Software
+Navegador atualizado
+npm
+Git
+
+10. Escalabilidade
+
+A arquitetura escolhida permite futuras implementações, como:
+
+Notificações push
+Inteligência Artificial para recomendações
+Integração com Google Calendar
+Integração com aplicativos de monitoramento de tempo
+Gamificação avançada
+
